@@ -1,0 +1,423 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>IPI - Cours de Java - Java 350</title>
+    
+    <meta name="description" content="" />
+    <meta name="author" content="Pierre-Julien VILLOUD" />
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/idea.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+    
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="my-navbar">
+  <a class="navbar-brand" href="index.html">
+    <img src="img/ipi.jpg" width="30" height="30" alt=""> Cours Java 350
+  </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="nav nav-pills mr-auto">
+      
+    </ul>
+    <span class="navbar-text">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <!--a class="btn btn-primary" href="https://github.com/pjvilloud/ipi-java-350-delivery-ex" target="_blank"><i class="fa fa-icon fa-gamepad"></i></a-->
+            &nbsp;
+            <a class="btn btn-primary" href="mailto:pjvilloud@protonmail.com"><i class="fa fa-icon fa-envelope"></i></a>
+            &nbsp;
+            <a class="btn btn-primary" href="https://github.com/pjvilloud" target="_blank"><i class="fa fa-icon fa-github"></i></a>
+            &nbsp;
+            <a class="btn btn-primary" href="https://linkedin.com/pjvilloud" target="_blank"><i class="fa fa-icon fa-linkedin"></i></a>&nbsp;
+            <a class="btn btn-primary" href="#" id="numSlide">1</a>
+        </div>
+    </span>
+  </div>
+</nav>
+<div class="progress">
+  <div id="progress" class="progress-bar" style="width: 0%;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="container-fluid" id="impress">
+
+    <div id="accueil" class="step slide" data-rel-x="0" data-y=0>
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container text-center">
+            <h1 class="display-3">Bienvenue !</h1>
+            <p class="lead">
+                <h2>Pierre-Julien VILLOUD</h2>
+                <div class="big-top-margin">
+                    <img src="img/pjvilloud.jpg" class="img-bienvenue rounded mx-auto d-block" alt="Pierre-Julien VILLOUD">
+                </div>
+                <div class="big-top-margin">
+                    <h3><i class="fa fa-icon fa-envelope-square"></i>&nbsp;<a href="mailto:pjvilloud@protonmail.com">pjvilloud@protonmail.com</a></h3>
+                    <h3><i class="fa fa-icon fa-github-square"></i>&nbsp;<a href="https://github.com/pjvilloud" target="_blank">https://github.com/pjvilloud</a></h3>
+                    <h3><i class="fa fa-icon fa-linkedin-square"></i>&nbsp;<a href="https://linkedin.com/pjvilloud" target="_blank">https://linkedin.com/pjvilloud</a></h3>
+                    <h3><i class="fa fa-icon fa-globe"></i>&nbsp;<a href="http://pjvilloud.github.io" target="_blank">http://pjvilloud.github.io</a></h3>
+                </div>
+            </p>
+          </div>
+        </div>
+    </div>
+
+    <div id="introduction" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Introduction</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Maintenant que nous avons développé notre application web et qu'elle tourne en local, il faut avoir un <em>hébergement</em> permettant le <em>déploiement</em> de l'application afin de la rendre accessible à d'autres utilisateurs. 
+            </div>
+          </div>
+          <div class="container small-font big-top-margin">
+            <ul class="list-group">
+              <li class="list-group-item">Les pré-requis avant de réfléchir à l'hébergement</li>
+              <li class="list-group-item">Les différents types d'hébergement</li>
+              <li class="list-group-item">Choisir le bon hébergement</li>
+              <li class="list-group-item">La maintenance</li>
+            </ul>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font big-top-margin" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Ces éléments sont à prendre en compte au plus tôt dans le processus de développement car ils peuvent potentiellement influer sur des choix organisationnels ou technologiques.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="prerequis" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Les pré-requis pour un déploiement serein</h1>
+          <div class="container-fluid big-top-margin">
+            <ul class="list-group">
+              <li class="list-group-item">Une bonne connaissance des contraintes et enjeux de l'application</li>
+              <li class="list-group-item">Un système de gestion des versions</li>
+              <li class="list-group-item">Un système de packaging</li>
+              <li class="list-group-item">Un système de déploiement (automatisé ?)</li>
+              <li class="list-group-item">Un moyen centralisé et sécurisé permettant de documenter les processus de déploiement.</li>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div id="prerequis-enjeux" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Une bonne connaissance des contraintes et enjeux de l'application</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est nécessaire de connaître la réponse aux questions suivantes : 
+            </div>
+          </div>
+          <div class="container small-font little-top-margin">
+            <ul class="list-group">
+              <li class="list-group-item">Quelles sont les contraintes de sécurité de l'application ?</li>
+              <li class="list-group-item">Quelles sont les contraintes réglementaires de l'application ?</li>
+              <li class="list-group-item">Quel est le budget réservé à l'hébergement ?</li>
+              <li class="list-group-item">Quelles sont les ressources humaines et matérielles disponibles en interne ?</li>
+              <li class="list-group-item">Quels environnements sont nécessaires pour le client ?</li>
+              <li class="list-group-item">...</li>
+            </ul>
+          </div>
+          <div class="container-fluid little-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pensez-vous à d'autres questions ?
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="prerequis-version" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Un système de gestion de version</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est très important d'avoir un système de gestion des versions clair et carré afin de faciliter le développement et la maintenance de l'application.
+            </div>
+          </div>
+          <div class="container-fluid small-font ">
+            <img src="img/dribbble.gitflow.png" alt="" width="1500">
+          </div>
+          <div class="container-fluid little-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Une bonne maîtrise du SCM est requise ainsi que le respect du <a href="https://www.atlassian.com/git/tutorials/comparing-workflows" target="_blank">workflow</a> par l'ensemble des développeurs
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="prerequis-packaging" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Un système de packaging</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Un <em>système de packaging</em> permet de gérer de manière simple et centralisée les artefacts de votre application (JAR, ZIP...) dans le but de les déployer dans un environnement.
+            </div>
+          </div>
+          <div class="container small-font text-center">
+            <img src="img/RepositoryDiagram.png" alt="">
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il fonctionne de pair avec le système de gestion de version et est parfois couplé à un repository central public ou privé (comme NPM pour les projets NodeJS ou MVN pour les projets Java par exemple).
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="prerequis-deploiement" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Un système de déploiement (automatisé ?)</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il faut pouvoir déployer de manière fiable et efficace <em>n'importe quelle</em> version de votre application sur n'importe quel environnement en ayant le moins d'impact possible sur les utilisateurs.
+            </div>
+          </div>
+          <div class="container-fluid">
+            <img src="img/deploy.jpg" alt="" height="500">
+          </div>
+          <div class="container-fluid little-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Idéalement ce déploiement est automatisé ou a minima documenté de manière très précise.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hebergements" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">L'hébergement</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il existe de nombreuses possibilités pour héberger une application web. Il faut d'abord définir s'il doit être interne ou externe.
+            </div>
+          </div>
+          <div class="container-fluid small-font little-top-margin">
+            <div class="row">
+              <div class="col-6"><ul class="list-group">
+              <li class="list-group-item list-group-item-primary"><strong>Hébergement interne</strong></li>
+              <li class="list-group-item list-group-item-success">Confidentialité</li>
+              <li class="list-group-item list-group-item-warning">Sécurité</li>
+              <li class="list-group-item list-group-item-warning">Maîtrise</li>
+              <li class="list-group-item list-group-item-warning">Coûts</li>
+              <li class="list-group-item list-group-item-warning">Performances</li>
+              <li class="list-group-item list-group-item-danger">Responsabilités</li>
+              <li class="list-group-item list-group-item-danger">Infrastructures</li>
+            </ul></div>
+            <div class="col-6"><ul class="list-group">
+              <li class="list-group-item list-group-item-primary"><strong>Hébergement externe</strong></li>
+              <li class="list-group-item list-group-item-success">Flexibilité</li>
+              <li class="list-group-item list-group-item-success">Responsabilités</li>
+              <li class="list-group-item list-group-item-warning">Coûts</li>
+              <li class="list-group-item list-group-item-warning">Performances</li>
+              <li class="list-group-item list-group-item-danger">Maîtrise</li>
+              <li class="list-group-item list-group-item-danger">Responsabilités</li>
+              <li class="list-group-item list-group-item-danger">Confidentialité</li>
+            </ul></div>
+            </div>
+          </div>
+          <div class="container-fluid little-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Ce choix peut être influencé par des contraintes réglementaires ou tout simplement matérielles
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hebergements-types" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Les différents types d'hébergement</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Une fois le choix interne/externe effectué, il reste encore beaucoup de possibilités.
+            </div>
+          </div>
+          <div class="container small-font">
+            <ul class="list-group">
+              <li class="list-group-item">Hébergement mutualisé</li>
+              <li class="list-group-item">Hébergement dédié</li>
+              <li class="list-group-item">Hébergement dédié virtualisé</li>
+              <li class="list-group-item">Hébergement cloud</li>
+            </ul>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Voyons en détail chacun d'entre eux.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hebergements-types-shared" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Hébergement mutualisé</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <pre><code class="java"></code></pre>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hebergements-types-dedicated" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Hébergement dédié</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <pre><code class="java"></code></pre>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hebergements-types-vps" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Hébergement dédié virtuel</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <pre><code class="java"></code></pre>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hebergements-types-cloud" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Hébergement cloud</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <pre><code class="java"></code></pre>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="choisir" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Choisir le bon hébergement</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <pre><code class="java"></code></pre>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="maintenance" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">La maintenance</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <pre><code class="java"></code></pre>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+
+<script src="js/impress.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/highlight.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/script.js"></script>
+
