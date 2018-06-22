@@ -267,13 +267,23 @@
                 <i class="fa fa-icon fa-info-circle"></i>&nbsp;Une fois le choix interne/externe effectué, il reste encore beaucoup de possibilités.
             </div>
           </div>
-          <div class="container small-font">
-            <ul class="list-group">
-              <li class="list-group-item">Hébergement mutualisé</li>
-              <li class="list-group-item">Hébergement dédié</li>
-              <li class="list-group-item">Hébergement dédié virtualisé</li>
-              <li class="list-group-item">Hébergement cloud</li>
-            </ul>
+          <div class="container-fluid small-font row">
+            <div class="col-3 big-top-margin">
+              <ul class="list-group big-top-margin">
+                <li class="list-group-item little-top-margin">Hébergement mutualisé</li>
+                <li class="list-group-item big-top-margin">Hébergement dédié</li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <img src="img/types-of-web-hosting.jpg" alt="" height="700">
+            </div>
+            <div class="col-3 big-top-margin">
+              <ul class="list-group big-top-margin">
+                <li class="list-group-item little-top-margin">Hébergement dédié virtualisé</li>
+                <li class="list-group-item big-top-margin">Hébergement cloud</li>
+              </ul>
+            </div>
+            
           </div>
           <div class="container-fluid">
             <div class="alert alert-primary small-font " role="alert">
@@ -284,59 +294,193 @@
       </div>
     </div>
 
-    <div id="hebergements-types-shared" class="step slide">
+    <div id="hebergements-shared" class="step slide">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Hébergement mutualisé</h1>
           <div class="container-fluid">
             <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Un hébergement mutualisé se fait sur un serveur physique qui regroupe plusieurs (jusqu'à plusieurs milliers !) applications indépendantes.
             </div>
           </div>
-          <div class="container small-font text-left">
-            <pre><code class="java"></code></pre>
+          <div class="container small-font">
+            <img src="img/shared.jpg" alt="">
           </div>
-          <div class="container-fluid">
+          <div class="container-fluid little-top-margin">
             <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;L'environnement technique, ainsi que les ressources du serveur sont donc partagés entre les applications. Une gestion de droits permet l'isolation des applications.
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div id="hebergements-types-dedicated" class="step slide">
+    <div id="hebergements-shared-proscons" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Hébergement mutualisé</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;L'hébergement mutualisé a des avantages et des inconvénients :
+            </div>
+          </div>
+          <div class="container-fluid small-font little-top-margin">
+            <div class="row">
+              <div class="col-6"><ul class="list-group">
+              <li class="list-group-item list-group-item-success"><strong>Avantages</strong></li>
+              <li class="list-group-item">Coûts faibles</li>
+              <li class="list-group-item">Aucune gestion technique du serveur</li>
+              <li class="list-group-item">Fiabilité</li>
+            </ul></div>
+            <div class="col-6"><ul class="list-group">
+              <li class="list-group-item list-group-item-danger"><strong>Inconvénients</strong></li>
+              <li class="list-group-item">Performances</li>
+              <li class="list-group-item">Scalabilité</li>
+              <li class="list-group-item">Sécurité</li>
+              <li class="list-group-item">Support limité</li>
+              <li class="list-group-item">Environnement technique <em>figé</em></li>
+              <li class="list-group-item">IP partagée</li>
+            </ul></div>
+            </div>
+          </div>
+          <div class="container-fluid little-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;L'hébergement mutualisé peut être amélioré en utilisant un système de cluster de machines rassemblant plusieurs machines physiques sur une même machine logique. Dans ce cas, les performances peuvent être modulées par l'ajout/suppression de machines.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hebergements-dedicated" class="step slide">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Hébergement dédié</h1>
           <div class="container-fluid">
             <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Un hébergement dédié se fait sur un serveur physique qui héberge une seule application.
             </div>
           </div>
-          <div class="container small-font text-left">
-            <pre><code class="java"></code></pre>
+          <div class="container small-font">
+            <img src="img/dedicated.jpg" alt="">
           </div>
-          <div class="container-fluid">
+          <div class="container-fluid little-top-margin">
             <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;La gestion et l'administration et la maintenance de la machine vous incombe !
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div id="hebergements-types-vps" class="step slide">
+    <div id="hebergements-dedicated-proscons" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Hébergement dédié</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;L'hébergement dédié a des avantages et des inconvénients :
+            </div>
+          </div>
+          <div class="container-fluid small-font little-top-margin">
+            <div class="row">
+              <div class="col-6"><ul class="list-group">
+              <li class="list-group-item list-group-item-success"><strong>Avantages</strong></li>
+              <li class="list-group-item">Performances</li>
+              <li class="list-group-item">Sécurité</li>
+              <li class="list-group-item">Fiabilité</li>
+              <li class="list-group-item">Évolutivité</li>
+            </ul></div>
+            <div class="col-6"><ul class="list-group">
+              <li class="list-group-item list-group-item-danger"><strong>Inconvénients</strong></li>
+              <li class="list-group-item">Coûts plus importants</li>
+              <li class="list-group-item">Sécurité</li>
+              <li class="list-group-item">Scalabilité</li>
+              <li class="list-group-item">Durabilité</li>
+              <li class="list-group-item">Responsabilité</li>
+              <li class="list-group-item">Fortes connaissances techniques requises</li>
+              <li class="list-group-item">Gestion <em>manuelle</em> des sauvegardes</li>
+            </ul></div>
+            </div>
+          </div>
+          <div class="container-fluid little-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;L'hébergement dédié garantit de meilleures performances et une plus grande autonomie mais implique un suivi de l'environnement technique sérieux (sauvegardes, patchs, mises à jour...).
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hebergements-vps" class="step slide">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Hébergement dédié virtuel</h1>
           <div class="container-fluid">
             <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Un hébergement dédié virtuel, appelé aussi serveur privé virtuel (VPS) consiste à séparer un gros serveur physique en plusieurs serveurs virtuels indépendants.
             </div>
           </div>
-          <div class="container small-font text-left">
-            <pre><code class="java"></code></pre>
+          <div class="container small-font">
+            <img src="img/vps.jpg" alt="">
+          </div>
+          <div class="container-fluid little-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;C'est une solution intermédiaire entre hébergement dédié et mutualisé.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hebergements-vps-proscons" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Hébergement dédié virtuel</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;L'hébergement dédié virtuel a des avantages et des inconvénients :
+            </div>
+          </div>
+          <div class="container-fluid small-font little-top-margin">
+            <div class="row">
+              <div class="col-6"><ul class="list-group">
+              <li class="list-group-item list-group-item-success"><strong>Avantages</strong></li>
+              <li class="list-group-item">Tous les avantages de l'hébergement dédié !</li>
+              <li class="list-group-item">Mise en place rapide</li>
+              <li class="list-group-item">Scalabilité</li>
+              <li class="list-group-item">Évolutivité</li>
+              <li class="list-group-item">Coûts légèrement moins élevés qu'en dédié</li>
+            </ul></div>
+            <div class="col-6"><ul class="list-group">
+              <li class="list-group-item list-group-item-danger"><strong>Inconvénients</strong></li>
+              <li class="list-group-item">Pas aussi performant que le dédié</li>
+              <li class="list-group-item">Performances dépendent du <em>sérieux</em> de l'hébergeur...</li>
+              <li class="list-group-item">Fortes connaissances techniques requises</li>
+              <li class="list-group-item">Couche d'abstraction dégrade parfois les performances</li>
+            </ul></div>
+            </div>
+          </div>
+          <div class="container-fluid little-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;L'hébergement dédié est un bon compromis permettant une grande autonomie tout en maîtrisant les coûts.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hebergements-cloud" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Hébergement cloud</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;L'hébergement cloud 
+            </div>
+          </div>
+          <div class="container small-font">
+            <img src="img/cloud.jpg" alt="">
           </div>
           <div class="container-fluid">
             <div class="alert alert-primary small-font " role="alert">
@@ -347,21 +491,38 @@
       </div>
     </div>
 
-    <div id="hebergements-types-cloud" class="step slide">
+    <div id="hebergements-cloud-proscons" class="step slide">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Hébergement cloud</h1>
           <div class="container-fluid">
             <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;L'hébergement cloud
             </div>
           </div>
-          <div class="container small-font text-left">
-            <pre><code class="java"></code></pre>
+          <div class="container-fluid small-font little-top-margin">
+            <div class="row">
+              <div class="col-6"><ul class="list-group">
+              <li class="list-group-item list-group-item-success"><strong>Avantages</strong></li>
+              <li class="list-group-item">Mise en place rapide et <em>simple</em></li>
+              <li class="list-group-item">Scalabilité</li>
+              <li class="list-group-item">Évolutivité</li>
+              <li class="list-group-item">Coûts en fonction de l'utilisation</li>
+              <li class="list-group-item">Fiabilité</li>
+            </ul></div>
+            <div class="col-6"><ul class="list-group">
+              <li class="list-group-item list-group-item-danger"><strong>Inconvénients</strong></li>
+              <li class="list-group-item">Coûts parfois opaques et variables</li>
+              <li class="list-group-item">Offres parfois <em>packagées</em>, effets de <em>seuil</em>...</li>
+              <li class="list-group-item">Maîtrise</li>
+              <li class="list-group-item">Interfaces parfois complexes</li>
+              <li class="list-group-item">Configuration par défaut pas tout le temps optimales</li>
+            </ul></div>
+            </div>
           </div>
-          <div class="container-fluid">
+          <div class="container-fluid little-top-margin">
             <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;L'hébergement cloud est très intéressant lorsqu'on ne connaît pas ou maîtrise pas le trafic puisqu'il s'adaptera en fonction de l'utilisation (attention tout de même aux coûts qui peuvent également s'envoler !).
             </div>
           </div>
         </div>

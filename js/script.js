@@ -42,7 +42,12 @@ $(window).on('hashchange', function(e){
     newHash = origEvent.newURL.substring(origEvent.newURL.lastIndexOf("#")).replace("/","");
     $('#my-navbar li a').removeClass("active");
     $('#my-navbar li a[href="' + newHash.substring(0,newHash.indexOf("-")) + '"]').addClass("active");
-    $('#my-navbar li a[href="' + newHash.substring(0,newHash.lastIndexOf("-")) + '"]').addClass("active");
+    urls = newHash.split("-");
+    if(urls.length > 3){
+      $('#my-navbar li a[href="' + urls[0] + "-" + urls[1] + '"]').addClass("active");
+    } else {
+      $('#my-navbar li a[href="' + newHash.substring(0,newHash.lastIndexOf("-")) + '"]').addClass("active");
+    }
     $('#my-navbar li a[href="' + newHash + '"]').addClass("active");
     
 });
@@ -77,20 +82,37 @@ $("div.step.slide").each(function(index, el) {
   var xbase = 0; 
   if(id !== 'accueil'){
     if(id.indexOf("-") > 0){
-      var baseId = id.substring(0,id.indexOf("-"));
-      console.log(baseId);
-      $("div#dropdown-"+baseId).append('<a class="dropdown-item" href="#'+id+'">'+title+'</a>');
-      $(el).attr("data-rel-x", xOffset);
-      $(el).attr("data-rel-y", 0);
+      if(id.lastIndexOf("-") != id.indexOf("-")){
+        if(id.split("-").length == 4){
+          $(el).attr("data-rel-x", xOffset);
+          $(el).attr("data-rel-y", 0);
+          $(el).attr("data-rotate-x", 90);
+          $(el).attr("data-z", -2000);
+        } else {
+          $(el).attr("data-rel-x", 0);
+          $(el).attr("data-rel-y", 0);
+          $(el).attr("data-z", -2000);
+          $(el).attr("data-rotate-x", 90);
+        }
+      } else {
+        var baseId = id.substring(0,id.indexOf("-"));
+        console.log(baseId);
+        $("div#dropdown-"+baseId).append('<a class="dropdown-item" href="#'+id+'">'+title+'</a>');
+        $(el).attr("data-rel-x", xOffset);
+        $(el).attr("data-rel-y", 0);
+        $(el).attr("data-z", 0);
+      }
     } else {
       if($('div[id^="'+id+'-"]').length > 0){
         $("ul.nav.nav-pills.mr-auto").append('<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" id="navbarDropdown'+id+'" href="#'+id+'" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'+title+'</a> <div id="dropdown-'+id+'" class="dropdown-menu" aria-labelledby="navbarDropdown'+id+'"></div></li>');  
         $(el).attr("data-x", 0);
         $(el).attr("data-rel-y", yOffset);
+        $(el).attr("data-z", 0);
       } else {
         $("ul.nav.nav-pills.mr-auto").append('<li class="nav-item"><a class="nav-link" href="#'+id+'">'+title+'</a></li>');  
         $(el).attr("data-x", 0);
         $(el).attr("data-rel-y", yOffset);
+        $(el).attr("data-z", 0);
       }
     }
   }
