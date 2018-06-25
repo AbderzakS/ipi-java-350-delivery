@@ -153,25 +153,141 @@
       </div>
     </div>
 
-    <div id="prerequis-version" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Un système de gestion de version</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est très important d'avoir un système de gestion des versions clair et carré afin de faciliter le développement et la maintenance de l'application.
+    <div id="prerequis-enjeux-environnements" class="step slide">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container-fluid text-center">
+                <h1 class="display-3">Les environnements</h1>
+                <div class="container-fluid">
+                    <div class="alert alert-primary small-font" role="alert">
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Voici les environnements généralement nécessaires pour une application web
+                    </div>
+                </div>
+                <div class="container small-font little-top-margin">
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-info">Développement</li>
+                        <li class="list-group-item list-group-item-info">(Recette interne)</li>
+                        <li class="list-group-item list-group-item-warning">Recette externe (ou qualification)</li>
+                        <li class="list-group-item list-group-item-warning">Pré-production</li>
+                        <li class="list-group-item list-group-item-warning">(Formation)</li>
+                        <li class="list-group-item list-group-item-danger">Production</li>
+                        <li class="list-group-item">...</li>
+                    </ul>
+                </div>
+                <div class="container-fluid little-top-margin">
+                    <div class="alert alert-primary small-font " role="alert">
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;A un instant T, chaque environnement peut potentiellement avoir une version installée de l'application différente...
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="container-fluid small-font ">
-            <img src="img/dribbble.gitflow.png" alt="" width="1500">
-          </div>
-          <div class="container-fluid little-top-margin">
-            <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Une bonne maîtrise du SCM est requise ainsi que le respect du <a href="https://www.atlassian.com/git/tutorials/comparing-workflows" target="_blank">workflow</a> par l'ensemble des développeurs
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
+
+
+    <div id="prerequis-version" class="step slide">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container-fluid text-center">
+                <h1 class="display-3">Un système de gestion de version</h1>
+                <div class="container-fluid">
+                    <div class="alert alert-primary small-font" role="alert">
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est très important d'avoir un système de gestion des versions clair et carré afin de faciliter le développement et la maintenance de l'application.
+                    </div>
+                </div>
+                <div class="container-fluid small-font ">
+                    <img src="img/git.jpg" alt="" >
+                </div>
+                <div class="container-fluid little-top-margin">
+                    <div class="alert alert-primary small-font " role="alert">
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Une bonne maîtrise du SCM est requise ainsi que le respect du <a href="https://www.atlassian.com/git/tutorials/comparing-workflows" target="_blank">workflow</a> par l'ensemble des développeurs.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="prerequis-version-gitflow-1" class="step slide">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container-fluid text-center">
+                <h1 class="display-3">GitFlow (1/4)</h1>
+                <div class="container-fluid">
+                    <div class="alert alert-primary small-font" role="alert">
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Au lieu d'utiliser uniquement la branche <code>master</code>, le workflow <em>GitFlow</em> propose d'utiliser deux branches, <code>master</code> et <code>develop</code>.
+
+                    </div>
+                </div>
+                <div class="container-fluid small-font ">
+                    <img src="img/gitflow1.svg" alt="" height="500">
+                </div>
+                <div class="container-fluid little-top-margin">
+                    <div class="alert alert-primary small-font " role="alert">
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;La branche <code>master</code> contient l'historique de toutes les releases tandis que la branche <code>develop</code> est utilisée comme branche de travail pour l'intégration de nouvelles fonctionnalités.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="prerequis-version-gitflow-2" class="step slide">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container-fluid text-center">
+                <h1 class="display-3">GitFlow (2/4)</h1>
+                <div class="container-fluid">
+                    <div class="alert alert-primary small-font" role="alert">
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Chaque nouvelle fonctionnalité possède sa propre branche (on parle de <em>feature branch</em>) créée à partir de <code>develop</code>.
+                    </div>
+                </div>
+                <div class="container-fluid small-font ">
+                    <img src="img/gitflow2.svg" alt="" height="500">
+                </div>
+                <div class="container-fluid little-top-margin">
+                    <div class="alert alert-primary small-font " role="alert">
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Lorsque le développement de la fonctionnalité est terminé, la <em>feature branch</em> est mergée dans <code>develop</code> (jamais dans <code>master</code> !!!)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="prerequis-version-gitflow-3" class="step slide">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container-fluid text-center">
+                <h1 class="display-3">GitFlow (3/4)</h1>
+                <div class="container-fluid">
+                    <div class="alert alert-primary small-font" role="alert">
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Lorsqu'assez de fonctionnalités ont été développées et que l'on souhaite les livrer, on crée une <em>release branch</em> à partir de <code>develop</code>.
+                    </div>
+                </div>
+                <div class="container-fluid small-font ">
+                    <img src="img/gitflow3.svg" alt="" height="500">
+                </div>
+                <div class="container-fluid little-top-margin">
+                    <div class="alert alert-primary small-font " role="alert">
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;L'intérêt d'avoir une branche pour chaque release permet de perfectionner la version (corriger les éventuels bugs, créer de la documentation...) sans perturber le développement de nouvelles fonctionnalités. Une fois la release effectuée, on merge la branche <em>release</em> dans <code>develop</code>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="prerequis-version-gitflow-4" class="step slide">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container-fluid text-center">
+                <h1 class="display-3">GitFlow (4/4)</h1>
+                <div class="container-fluid">
+                    <div class="alert alert-primary small-font" role="alert">
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Lorsque des bugs sont detectés en production (oui ça arrive...) et que l'on souhaite les corriger, on crée une branche à partir de la version concernée dans <code>master</code>.
+
+                    </div>
+                </div>
+                <div class="container-fluid small-font ">
+                    <img src="img/gitflow4.svg" alt="" height="500">
+                </div>
+                <div class="container-fluid little-top-margin">
+                    <div class="alert alert-primary small-font " role="alert">
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Une fois le bug corrigé et testé, la branche est mergée dans <code>master</code> avec un nouveau numéro de version et dans <code>develop</code>.
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="prerequis-packaging" class="step slide">
@@ -463,7 +579,7 @@
           </div>
           <div class="container-fluid little-top-margin">
             <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;L'hébergement dédié est un bon compromis permettant une grande autonomie tout en maîtrisant les coûts.
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;L'hébergement dédié virtuel est un bon compromis permettant une grande autonomie tout en maîtrisant les coûts.
             </div>
           </div>
         </div>
