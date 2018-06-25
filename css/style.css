@@ -11,6 +11,13 @@
     background-color: #fff !important;
 }
 
+.scrollable {
+    width: 1600px;
+    height: 800px;
+    overflow-y: scroll;
+    overflow-x:hidden;
+}
+
 @media only screen and (min-width: 992px) and (max-width: 1281px) {
    nav.navbar {
     padding: 0 5px 0 5px;

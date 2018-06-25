@@ -95,7 +95,6 @@
               <li class="list-group-item">Les pré-requis avant de réfléchir à l'hébergement</li>
               <li class="list-group-item">Les différents types d'hébergement</li>
               <li class="list-group-item">Choisir le bon hébergement</li>
-              <li class="list-group-item">La maintenance</li>
             </ul>
           </div>
           <div class="container-fluid">
@@ -215,7 +214,7 @@
                     </div>
                 </div>
                 <div class="container-fluid small-font ">
-                    <img src="img/gitflow1.svg" alt="" height="500">
+                    <img src="img/gitflow1.svg" alt="" height="600">
                 </div>
                 <div class="container-fluid little-top-margin">
                     <div class="alert alert-primary small-font " role="alert">
@@ -236,7 +235,7 @@
                     </div>
                 </div>
                 <div class="container-fluid small-font ">
-                    <img src="img/gitflow2.svg" alt="" height="500">
+                    <img src="img/gitflow2.svg" alt="" height="600">
                 </div>
                 <div class="container-fluid little-top-margin">
                     <div class="alert alert-primary small-font " role="alert">
@@ -257,7 +256,7 @@
                     </div>
                 </div>
                 <div class="container-fluid small-font ">
-                    <img src="img/gitflow3.svg" alt="" height="500">
+                    <img src="img/gitflow3.svg" alt="" height="600">
                 </div>
                 <div class="container-fluid little-top-margin">
                     <div class="alert alert-primary small-font " role="alert">
@@ -279,7 +278,7 @@
                     </div>
                 </div>
                 <div class="container-fluid small-font ">
-                    <img src="img/gitflow4.svg" alt="" height="500">
+                    <img src="img/gitflow4.svg" alt="" height="600">
                 </div>
                 <div class="container-fluid little-top-margin">
                     <div class="alert alert-primary small-font " role="alert">
@@ -309,6 +308,34 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div id="prerequis-packaging-numeros" class="step slide">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container-fluid text-center">
+                <h1 class="display-3">Numéros de version</h1>
+                <div class="container-fluid">
+                    <div class="alert alert-primary small-font" role="alert">
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Afin de pouvoir rapidement savoir ce que contient un package, et ce qu'il est possible de faire avec, on utilise une nomenclature spécifique
+
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <h1 class="display-1"><span class="text-danger">X</span>.<span class="text-warning">Y</span>.<span class="text-success">Z</span>-<span class="text-primary">build</span></h1>
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-danger">On incrément X lorsqu'on ajoute des fonctionnalités majeures ou que l'on casse la rétro-compatibilité.</li>
+                        <li class="list-group-item list-group-item-warning">On incrément Y lorsqu'on ajoute des fonctionnalités mineures.</li>
+                        <li class="list-group-item list-group-item-success">On incrément Z quand on corrige une anomalie.</li>
+                        <li class="list-group-item list-group-item-primary">On peut utiliser <em>build</em> pour identifier la provenance du package ou l'environnement sur lequel il peut être livré. Exemple <code>SNAPSHOT</code>, <code>RC1</code></li>
+                    </ul>
+                </div>
+                <div class="container-fluid little-top-margin">
+                    <div class="alert alert-primary small-font " role="alert">
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est fortement conseillé d'avoir une nomenclature précise (même si elle diffère de celle proposée ici).
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="prerequis-deploiement" class="step slide">
@@ -592,7 +619,7 @@
           <h1 class="display-3">Hébergement cloud</h1>
           <div class="container-fluid">
             <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;L'hébergement cloud 
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;L'hébergement cloud consiste à consommer des <em>services</em> proposés par un hébergeur en payant en fonction de l'utilisation faite du service (bande passante, durée d'utilisation, mémoire consommée...).
             </div>
           </div>
           <div class="container small-font">
@@ -600,7 +627,7 @@
           </div>
           <div class="container-fluid">
             <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Dans le cas de l'hébergement, on parle d'IaaS (Infrastructure as a Service) lorsqu'on met à disposition des ressources materielles et de PaaS (Platform as a Service) lorsque ce sont des environnements complets mis à disposition.
             </div>
           </div>
         </div>
@@ -613,7 +640,7 @@
           <h1 class="display-3">Hébergement cloud</h1>
           <div class="container-fluid">
             <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;L'hébergement cloud
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;L'hébergement cloud a également ses avantages et inconvénients :
             </div>
           </div>
           <div class="container-fluid small-font little-top-margin">
@@ -649,39 +676,8 @@
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Choisir le bon hébergement</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
-            </div>
-          </div>
-          <div class="container small-font text-left">
-            <pre><code class="java"></code></pre>
-          </div>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="maintenance" class="step slide">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">La maintenance</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
-            </div>
-          </div>
-          <div class="container small-font text-left">
-            <pre><code class="java"></code></pre>
-          </div>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
-            </div>
+          <div class="container-fluid small-font scrollable ">
+            <img src="img/xwhich-web-hosting-infographic.jpg.pagespeed.ic.y-W_KAGU0C.jpg" width="1600" alt="">
           </div>
         </div>
       </div>
